@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 40px;
+}
+/* 管理者ログイン、登録画面 */
+.admin-login-title {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 200px;
+}
+
+/* 予約確認画面 */
+.header-area {
+    width: 90%;
+}
+
+.shop-books-title {
+    font-size: 30px;
+    text-align: center;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.booking-status tr + tr {
+    height: 40px;
+}
+
+
+/* 店舗情報更新ページ */
+.update-shop-info {
+    width: 70%;
+    max-width: 700px;
+    margin: 60px auto 200px;
+}
+
+.update-shop-info dt {
+    margin-bottom: 6px;
+    margin-top: 20px;
+    font-size: 18px;
+    width: 30%;
+}
+
+.update-shop-info dd {
+    width: 100%;
+}
+
+.update-shop-info dd input[name = "name"] {
+    width: 50%;
+    padding: 6px;
+    font-size: 15px;
+}
+
+.update-shop-info dd input {
+    width: 100%;
+    padding: 6px;
+    font-size: 15px;
+}
+
+.update-shop-info dd select {
+    width: 120px;
+    padding: 6px;
+    font-size: 15px;
+}
+
+.update-shop-info dd textarea {
+    width: 100%;
+    padding: 6px;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.update-button-area {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.update-btn {
+    font-size: 16px;
+    color: aliceblue;
+    background-color: rgb(54, 54, 250);
+}
+
+.update-btn:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.book-error-message {
+    color: red;
+    font-size: 16px;
+}
+
+/* コース作成・更新ページ */
+.update-courses,
+.create-courses {
+    width: 85%;
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+.courses-main-title {
+    font-size: 30px;
+}
+
+.courses-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.update-courses form,
+.create-courses form {
+    margin-top: 12px;
+    font-size: 20px;
+}
+
+.update-courses form,
+.create-courses form {
+    display: flex;
+}
+
+.update-courses input,
+.create-courses input {
+    font-size: 20px;
+    padding: 4px;
+    margin-right: 4px;
+}
+
+.update-courses input[name="update_course_name"],
+.create-courses input[name="course_name"] {
+    display: inline-block;
+    width: 180px;
+}
+
+.update-courses input[name="update_price"],
+.create-courses input[name="price"] {
+    display: inline-block;
+    width: 80px;
+}
+
+.create-course form label {
+    font-size: 22px;
+}
+
+.yen {
+    font-size: 22px;
+    margin-right: 18px;
+}
+
+.update-course-btn {
+    background-color: rgb(0, 98, 190);
+    color: white;
+    display: inline-block;
+    width: 100px;
+    border: none;
+    font-size: 18px;
+    margin-right: 14px;
+}
+
+.delete-course-btn {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    line-height: 1.5;
+    font-size:
+     18px;
+}
+.create-course-btn {
+    background-color: rgb(22, 190, 0);
+    color: white;
+    display: inline-block;
+    width: 110px;
+    border: none;
+    font-size: 18px;
+    margin-left: 16px;
+}
+
+.update-course-btn:hover,
+.delete-course-btn:hover,
+.create-course-btn:hover {
+    opacity: .8;
+}
+
+.course-error-massage {
+    color: red;
+    margin-top: 4px;
+}
+
+/* メール送信画面 */
+.send-mail-area {
+    width: 70%;
+    max-width: 700px;
+    margin: 60px auto 200px;
+}
+
+.send-mail-area dt {
+    margin-bottom: 6px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.send-mail-area dd {
+    width: 100%;
+    padding: 6px;
+    font-size: 17px;
+}
+
+.send-mail-area dd input[name = "subject"] {
+    width: 50%;
+    padding: 6px;
+}
+
+.send-mail-area textarea {
+    width: 100%;
+}
+
+.send-btn-area {
+    margin: 30px auto 0;
+    width: 120px;
+}
+
+.send-btn {
+    width: 100%;
+    font-size: 16px;
+    line-height: 2.4;
+    border: none;
+    color: aliceblue;
+    background-color: rgb(54, 54, 250);
+    border-radius: 6px;
+}
+
+.send-btn:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+/* サイト管理者ログインページ */
+.site-manager-login-title {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+
+/* サイト管理者ページ ・店舗作成ページ*/
+.shop-create-area {
+    margin: 40px auto 0;
+    width: 70%;
+    max-width: 600px;
+}
+
+.create-shop-tab {
+    font-size: 18px;
+}
+
+.create-shop dt {
+    margin-bottom: 5px;
+    margin-top: 16px;
+    font-size: 17px;
+}
+
+.create-shop dt:first-of-type {
+    margin-top: 0;
+}
+
+.create-shop dd input {
+    width: 60%;
+    padding: 4px;
+}
+
+.create-shop dd select {
+    width: 60%;
+    padding: 4px;
+}
+
+.create-shop dd textarea {
+    width: 100%;
+    padding: 4px;
+    font-size: 14px;
+    line-height: 1.3;
+}

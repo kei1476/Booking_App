@@ -1,0 +1,553 @@
+@charset "utf-8";
+@media(max-width:768px){
+
+/* 店舗一覧ページ/ヘッダー */
+    .header-area {
+        display: block;
+        padding: 0;
+        width: 100%;
+        height: 70px;
+    }
+
+    .title-area {
+        height: 80px;
+        position: relative;
+    }
+
+    .openbtn6 {
+        position: absolute;
+        top: 50%;
+        left: 6%;
+        transform: translateY(-50%);
+    }
+
+    .header-title {
+        font-size: 28px;
+        position: absolute;
+        left: 12%;
+    }
+
+    .openbtn6 {
+        width: 35px;
+        height: 35px;
+    }
+
+        .openbtn6 span:nth-of-type(1) {
+            top: 9px;
+            left: 30%;
+        }
+
+        .openbtn6 span:nth-of-type(2) {
+            top: 17px;
+            left: 30%;
+        }
+
+        .openbtn6 span:nth-of-type(3) {
+            top: 25px;
+            left: 30%;
+        }
+
+        .openbtn6.active span:nth-of-type(1) {
+            top: 10px;
+            left: 13px;
+            transform: translateY(6px) rotate(-135deg);
+        }
+
+        .openbtn6.active span:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        .openbtn6.active span:nth-of-type(3) {
+            top: 22px;
+            left: 13px;
+            transform: translateY(-6px) rotate(135deg);
+        }
+
+    .main-nav-list {
+        font-size: 20px;
+    }
+
+    .logout-btn {
+        font-size: 20px;
+    }
+
+    .header-search-form {
+        width: 300px;
+        margin: 20px auto 0;
+    }
+
+    .area,
+    .genre {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .responsive-search-list select {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .search {
+        width: 100%;
+        padding: 8px 0 8px;
+    }
+
+    .search-area {
+        margin-top: 8px;
+        width: 100%;
+    }
+
+    .search-btn {
+        padding: 0;
+        height: 100%;
+        display: block;
+        width: 40px;
+        margin: 20px auto 0;
+    }
+
+    .main-nav-list-notlogin {
+        font-size: 20px;
+    }
+
+    .header-search-form {
+        display: none;
+    }
+
+    .responsive-search-area {
+        display: block;
+    }
+
+    .responsive-search-area form {
+        width: 300px;
+        margin: 20px auto 0;
+    }
+
+/* 店舗一覧ページ/一覧エリア */
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        margin: 30px auto 30px;
+    }
+
+    .shop {
+        width: 100%;
+        height: 250px;
+    }
+
+    .shop-name {
+        font-size: 20px;
+    }
+
+    .shop-tags {
+        font-size: 14px;
+    }
+
+    .btn-area {
+        margin-top: 12px;
+    }
+
+    .detail-btn {
+        font-size: 12px;
+    }
+
+    .fa-heart {
+        font-weight: 700;
+    }
+
+    /* マイページ */
+    .mypage-nav-area {
+        margin-top: 25px;
+    }
+
+    .user-name {
+        margin-top: 35px;
+        font-size: 24px;
+    }
+
+    .booking-status {
+        height: 250px;
+    }
+
+    .status-row {
+        height: 60px;
+    }
+
+    .booking-status-title {
+        margin-top: 50px;
+    }
+
+    .update-book-btn-area {
+        height: 45px;
+    }
+
+    .show-booking-area,
+    .show-liked-shops {
+        display: block;
+        width: 300px;
+        margin-top: 25px;
+    }
+
+    .booking-status-title,
+    .liked-shops-title {
+        width: 300px;
+        font-size: 20px;
+    }
+
+    .liked-shop {
+        height: 280px;
+    }
+
+
+    /* 詳細ページ/店舗詳細 */
+    .shop-detail-wrapper {
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .shop-detail {
+        width: 90%;
+        margin: 0 auto 0;
+    }
+
+
+    .detail-title {
+        font-size: 28px;
+    }
+
+    .detail-back-btn {
+        font-size: 16px;
+        width: 32px;
+    }
+
+    .detail-shop-name {
+        font-size: 24px;
+    }
+
+    .shop-detail-content {
+        margin-top: 18px;
+        font-size: 14px;
+    }
+
+    .detail-texts {
+        margin-top: 15px;
+    }
+
+
+    /* 詳細ページ/予約フォーム */
+    .booking-area {
+        width: 90%;
+        margin: 60px auto 0;
+        padding: 12px;
+    }
+
+    .booking-title {
+        font-size: 20px;
+        width: 85%;
+        margin: 8px auto 15px;
+    }
+
+    .book-date,
+    .book-time,
+    .people {
+        padding: 2px;
+        margin: 0 auto 15px;
+        width: 85%;
+    }
+
+    .booking-content {
+        margin: 20px auto 0;
+        width: 85%;
+        font-size: 15px;
+    }
+
+    .booking-btn-area {
+        width: 120px;
+    }
+
+    .booking-btn {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+
+    /* 店舗詳細ページ/口コミエリア */
+    .evaluations-area  {
+        width: 90%;
+        margin-top: 70px;
+    }
+
+    .evaluations-title {
+        font-size: 24px;
+    }
+
+    .avg-score {
+        font-size: 20px;
+    }
+
+    .evaluation-form {
+        margin-top: 20px;
+        padding: 15px;
+    }
+
+    .score-label,
+    .comment-label {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .comment-label {
+        margin-top: 18px;
+    }
+
+    .stars label {
+        font-size: 24px;
+    }
+
+    .comment-area textarea {
+        height: 90px;
+        font-size: 14px;
+    }
+
+    .evaluation-btn {
+        font-size: 13px;
+    }
+
+    .evaluation-name,
+    .evaluation-score {
+        font-size: 16px;
+    }
+
+    .evaluation-comment {
+        font-size: 14px;
+    }
+
+    .pagination {
+        margin-top: 30px;
+    }
+
+    .page-link {
+        font-size: 16px;
+    }
+
+
+    /* ログイン・ログアウトページ */
+    .register-area {
+        width: 300px;
+        background-color: white;
+    }
+
+    .register-title {
+        line-height: 2.5;
+        font-size: 15px;
+    }
+
+    .register-dl {
+        padding: 0px;
+    }
+
+    .register-dt {
+        font-size: 20px;
+        margin-top: 6px;
+    }
+
+    .register-dd {
+        padding: 0;
+    }
+
+    .register-btn-area {
+        margin-top: 20px;
+    }
+
+    .registration-btn {
+        font-size: 12px;
+    }
+
+
+    /* 予約完了ページ */
+    .thanks-content {
+        width: 300px;
+        height: 150px;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .thanks-text {
+        font-size: 16px;
+    }
+
+    .back-btn {
+        width: 80px;
+        font-size: 12px;
+    }
+
+
+    /* 予約変更画面 */
+    .update-booking-area {
+        min-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .update-booking-form {
+        padding: 15px;
+    }
+
+    .update-booking-form select ,
+    .update-booking-form input {
+        font-size: 11px;
+    }
+
+    .update-booking-form input {
+        margin-top: 8px;
+    }
+
+    .update-booking-content {
+        width: 80%;
+        margin: 20px auto 0;
+        font-size: 14px;
+    }
+
+    .update-booking-content th {
+        text-align: left;
+    }
+
+    .update-booking-content td {
+        text-align: center;
+    }
+
+    .update-btn-area {
+        margin-top: 20px;
+    }
+
+    .update-btn {
+        width: 110px;
+        font-size: 12px;
+    }
+
+    .success-update-book {
+        width: 300px;
+        font-size: 18px;
+        margin-top: 25px;
+    }
+
+    /* 管理画面ここから */
+    /* 店舗代表者ページ 　コース作成・更新ページ*/
+    .update-courses {
+        width: 95%;
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .create-courses {
+        margin-bottom: 200px;
+    }
+
+    .courses-main-title {
+        font-size: 24px;
+    }
+
+    .courses-title {
+        font-size: 20px;
+        margin: 25px 0 0;
+        text-align: center;
+    }
+
+    .update-courses form,
+    .create-courses form {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 22px;
+        padding: 4px;
+        font-size: 16px;
+    }
+
+    .create-courses form {
+        max-width: 280px;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .price-area {
+        margin-top: 8px;
+    }
+
+    .update-courses input,
+    .create-courses input {
+        font-size: 16px;
+        padding: 3px;
+    }
+
+    .create-courses input {
+        margin-top: 8px;
+    }
+
+    #price {
+        margin-left: 32px;
+    }
+
+    .create-course form label {
+        font-size: 16px;
+    }
+
+    .yen {
+        font-size: 18px;
+        margin-right: 6px;
+    }
+
+    .course-btn-area {
+        margin-top: 8px;
+    }
+
+    .update-course-btn {
+        font-size: 15px;
+        margin-right: 4px;
+    }
+
+    .delete-course-btn {
+        font-size: 15px;
+        margin-top: 4px;
+    }
+
+    .create-course-btn-area {
+        text-align: center;
+    }
+
+    .create-course-btn {
+        width: 70px;
+        font-size: 15px;
+        margin: 20px 0 0;
+    }
+
+    /* サイト管理者ページ・店舗作成画面 */
+    .site-manager-title {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    /* サイト管理者ページ・店舗作成画面 */
+    .shop-create-area {
+        margin: 40px auto 0;
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .create-shop dt {
+        font-size: 14px;
+    }
+
+    .create-shop dd input,
+    .create-shop dd select {
+        padding: 2px;
+        font-size: 12px;
+        width: 75%;
+        min-width: 260px;
+    }
+}
+

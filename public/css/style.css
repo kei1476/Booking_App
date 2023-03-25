@@ -1,0 +1,1012 @@
+@charset "utf-8";
+body {
+    background-color: #f8f8f8;
+}
+
+/* 店舗一覧ページ　header */
+.header {
+    width: 100%;
+    transition-duration: .3s;
+    top: 0;
+    z-index: 999;
+}
+
+.main-menu {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #f8f8f8;
+}
+
+.main-nav {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+    color: #0917e4;
+}
+
+.main-nav-list a {
+    color: #0917e4;
+}
+
+.main-nav-list-notlogin a {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    color: #0917e4;
+}
+
+.logout-form {
+    background-color: transparent;
+    box-shadow: none;
+    margin-bottom: 20px;
+}
+
+.logout-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 28px;
+    color: #0917e4;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    max-width: 1100px;
+    padding: 20px 35px 20px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f8f8f8;
+    transition: all .3s;
+}
+.open {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.openbtn6 {
+    position: relative;
+    background: #0917e4;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    display: inline-block;
+    z-index: 999;
+}
+
+.openbtn6 span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    z-index: 999;
+}
+
+
+.openbtn6 span:nth-of-type(1) {
+    top: 15px;
+    width: 45%;
+}
+
+.openbtn6 span:nth-of-type(2) {
+    top: 23px;
+    width: 35%;
+}
+
+.openbtn6 span:nth-of-type(3) {
+    top: 31px;
+    width: 20%;
+}
+
+.openbtn6.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-135deg);
+    width: 30%;
+}
+
+.openbtn6.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn6.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(135deg);
+    width: 30%;
+}
+
+.title-area {
+    position: relative;
+    z-index: 999;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.small {
+    height: 65px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #0917e4;
+    display: inline-block;
+    margin-left: 16px;
+ }
+
+ /* 店舗一覧ページ・検索欄 */
+.header-search-form {
+    background-color: white;
+    height: 48px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 8px 1px rgb(148, 147, 147);
+}
+
+.area,
+.genre,
+.search {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: inline-block;
+    border: none;
+}
+
+.area {
+    width: 75px;
+    margin-left: 16px;
+    font-size: 14px;
+}
+.genre {
+    width: 92px;
+    margin-left: 10px;
+}
+
+.search-area {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.responsive-search-area {
+    display: none;
+}
+
+.search {
+    margin-left: 2px;
+    width: 200px;
+}
+
+.fa-magnifying-glass {
+    margin-left: 16px;
+    display: inline-block;
+    color: #C8C8C8;
+}
+
+.search-btn {
+    border: none;
+    color: inherit;
+    background-color: #C8C8C8;
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+/* 店舗一覧ページ main */
+.main {
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 20px;
+}
+
+.search-error-message {
+    width: 50%;
+    margin: 160px auto 0;
+    text-align: center;
+    font-size: 26px;
+}
+
+.shop {
+    height: 300px;
+}
+
+.shop-image-area {
+    width: 100%;
+    height: 50%;
+}
+
+.shop-image {
+    width: 100%;
+    height: 100%;
+}
+
+.shop-contents {
+    background-color: white;
+    padding: 16px;
+}
+
+.shop-name {
+    font-size: 22px;
+}
+
+.shop-tags {
+    margin-top: 10px;
+}
+
+.btn-area {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-btn {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    background-color: #0917e4;
+    padding: 8px;
+    width: 100px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.detail-btn:hover {
+    opacity: .8;
+}
+
+.fa-heart {
+    display: inline-block;
+    font-size: 28px;
+    margin-right: 8px;
+    z-index: -1;
+}
+
+.likebtn {
+    color: black;
+}
+
+/* 店舗詳細ページ・店舗概要エリア */
+.shop-detail-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.shop-detail {
+    width: 50%;
+}
+
+.shop-detail-nav {
+    width: 85%;
+    margin: 40px auto 0;
+    position: relative;
+    z-index: 999;
+}
+
+.detail-title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #0917e4;
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.shop-title-area {
+    position: relative;
+}
+
+.detail-shop-name {
+    position: absolute;
+    top: 4px;
+    font-size: 28px;
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.detail-back-btn {
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+    line-height: 2;
+    width: 40px;
+    border-radius: 4px;
+    font-size: 18px;
+    color: black;
+}
+
+.fa-chevron-left {
+    transition-duration: .2s;
+}
+
+.shop-detail-content {
+    margin-top: 26px;
+}
+
+.detail-image {
+    width: 100%;
+}
+
+.detail-tags {
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.detail-texts {
+    margin-top: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.footer {
+    background-color: #0917e4;
+    height: 70px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer small {
+    display: inline-block;
+    color: #f8f8f8;
+    font-size: 14px;
+}
+
+
+/* 店舗詳細ページ・予約エリア */
+.booking-area {
+    width: 40%;
+    background-color: #444ff5;
+    color: white;
+    padding: 26px;
+    box-sizing: border-box;
+}
+
+.booking-title {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.book-date {
+    display: block;
+    width: 90%;
+    border-radius: 4px;
+    border: none;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
+.courses,
+.book-time,
+.people,
+.course {
+    display: block;
+    width: 95%;
+    border-radius: 4px;
+    border: none;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
+.book-error-message {
+    margin-top: 4px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: yellow;
+}
+
+.fa-triangle-exclamation {
+    margin-right: 4px;
+}
+
+.booking-btn-area {
+    width: 150px;
+    margin: 25px auto 0;
+    text-align: center;
+}
+
+.booking-btn {
+    border: none;
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    background-color: #0311d6;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 4px;
+}
+
+.booking-btn:hover {
+    opacity: .7;
+}
+
+.booking-content {
+    background-color: #6b73df;
+    width: 95%;
+    margin-top: 50px;
+    border-radius: 4px;
+}
+
+th {
+    text-align: center;
+    width: 70px;
+    line-height: 2;
+}
+
+td {
+    text-align: left;
+    line-height: 2;
+    width: 200px;
+}
+
+
+/* 店舗詳細ページ 口コミ投稿・一覧エリア */
+.evaluations-area {
+    width: 80%;
+    max-width: 1100px;
+    margin: 120px auto 120px;
+    position: relative;
+}
+
+.evaluations-title {
+    font-size: 30px;
+    margin-right: 12px;
+    display: inline-block;
+}
+
+.avg-score {
+    display: inline-block;
+    color: rgb(15, 15, 15);
+    text-shadow: 1px 1px 5px gold;
+    font-size: 28px;
+}
+
+.evaluation-form {
+    margin-top: 50px;
+    box-shadow: none;
+    padding: 25px;
+}
+
+.score-label,
+.comment-label
+{
+    font-size: 18px;
+    margin-right: 17px;
+    margin-bottom: 16px;
+}
+
+.stars span {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.stars input[type='radio'] {
+    display: none;
+}
+
+.stars label {
+    color: #D2D2D2;
+    font-size: 30px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.stars label:hover,
+.stars label:hover~label,
+.stars input[type='radio']:checked~label {
+    color: #F8C601;
+}
+
+.comment-label {
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+}
+
+.comment-area textarea {
+    width: 95%;
+    max-width: 900px;
+    height: 110px;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.evaluation-btn-area {
+    width: 120px;
+    margin: 20px auto 0;
+}
+
+.evaluation-btn {
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.evaluation-error-message {
+    color: red;
+    margin-bottom: 4px;
+}
+
+/* 口コミ一覧のページネーション */
+.pagination-nav {
+    display: inline-block;
+}
+
+.pagination {
+    margin-top: 40px;
+    display: inline-block;
+    background: #2c63ff;
+    display: flex;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.page-link,
+.page-item {
+    font-size: 20px;
+    color: #fff;
+    padding: 4px;
+}
+
+.page-item:hover,
+.active {
+    background: #1944bd;
+}
+
+/*店舗詳細ページ 口コミ一覧エリア */
+.show-evaluations {
+    margin-top: 40px;
+}
+
+.evaluations {
+    margin-top: 40px;
+}
+
+.evaluation-name {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.evaluation-score {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.evaluation-comment {
+    margin-top: 8px;
+}
+
+.evaluations-login-btn-area {
+    margin-top: 20px;
+    transition-duration: .2s;
+    color: rgb(58, 58, 243);
+    width: 250px;
+}
+
+.evaluations-login-btn-area:hover {
+    transform: scale(1.02,1.05);
+}
+
+.evaluations-login-btn {
+    color: rgb(58, 58, 243);
+    margin-right: 4px;
+}
+
+.no-evaluations-text {
+    margin-top: 16px;
+    font-size: 22px;
+}
+
+/* 予約完了ページ*/
+.thanks-content {
+    position: relative;
+    width: 560px;
+    height: 300px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 8px 1px rgb(148, 147, 147);
+    background-color: white;
+    margin: 60px auto 0;
+    text-align: center;
+}
+
+.thanks-texts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.thanks-text {
+    font-size: 22px;
+}
+
+.back-btn {
+    margin-top: 30px;
+    display: inline-block;
+    color: white;
+    background-color: #0917e4;
+    padding: 8px;
+    width: 100px;
+    border-radius: 8px;
+}
+
+
+/* マイページここから */
+.mypage-nav-area {
+    width: 85%;
+    margin: 40px auto 0;
+    position: relative;
+}
+
+.mypage-title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #0917e4;
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.mypage-pagination-area {
+    position: relative;
+}
+
+.mypage-pagination {
+    background: #2c63ff;
+    display: flex;
+    position: absolute;
+    top: 0%;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.success-update-book {
+    text-align: center;
+    font-size: 22px;
+    color: rgb(15, 231, 15);
+    border: 1px solid;
+    border-radius: 12px;
+    line-height: 2.2;
+    width: 40%;
+    margin: 30px auto 0;
+    animation-name: fadeUpDown;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpDown {
+    from {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.show-booking-area {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 20px;
+}
+
+.user-name {
+    font-size: 26px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.booking-status-title,
+.liked-shops-title {
+    width: 90%;
+    max-width: 1100px;
+    font-size: 26px;
+    text-align: left;
+    margin: 65px auto 0;
+}
+
+.booking-status {
+    border-radius: 6px;
+    background-color: #1a29ff;
+    color: white;
+    height: 300px;
+    max-width: 330px;
+    margin-top: 10px;
+}
+
+.status-row {
+    position: relative;
+    height: 70px;
+}
+
+.status-th {
+    width: 35%;
+}
+
+.status-title {
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+    font-size: 20px;
+}
+
+.fa-clock {
+    margin-top: 23px;
+    font-size: 20px;
+}
+
+.book-delete-btn {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    color: white;
+    font-size: 20px;
+}
+
+.update-book-btn-area {
+   position: relative;
+   height: 60px;
+}
+
+.update-book-btn  {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+}
+
+.update-book-btn a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.update-book-btn a:hover {
+    opacity: .8;
+}
+
+.pay-link {
+    color: white;
+}
+
+.complete-pay {
+    background-color: green;
+    padding: 2px;
+    border-radius: 6px;
+    margin-left: 18px;
+}
+
+.payment-status {
+    position: relative;
+    height: 30px;
+    margin-bottom: 8px;
+}
+
+.payment-status th {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    margin-top: 8px;
+    transform: translate(-50%, -50%);
+}
+
+.show-liked-shops {
+    width: 95%;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 20px;
+}
+
+.liked-shop {
+    max-width: 300px;
+    min-width: 180px;
+}
+
+.liked {
+    color: red;
+    animation-name: zoom;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(.6);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* 登録・ログインページここから */
+.register-nav-area {
+    width: 85%;
+    margin: 30px auto 0;
+}
+
+.register-area {
+    width: 420px;
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 6px;
+}
+
+.register-form {
+    box-shadow: 1px 1px 8px 1px rgb(148, 147, 147);
+}
+
+.register-title {
+    background-color: #0917e4;
+    color: white;
+    line-height: 3;
+    padding-left: 12px;
+    border-radius: 6px 6px 0px 0px
+}
+
+.register-dl {
+    width: 80%;
+    margin: 28px auto 0;
+    padding: 4px;
+}
+
+.register-dt {
+    display: inline-block;
+    text-align: left;
+    font-size: 24px;
+    width: 10%;
+    color: #6d6c6c;
+    vertical-align: middle;
+}
+
+.register-dd {
+    display: inline-block;
+    width: 85%;
+}
+
+.register-dd input {
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.register-btn-area {
+    margin: 30px auto 0;
+    padding-bottom: 18px;
+    width: 80%;
+    text-align: right;
+}
+
+.registration-btn {
+    display: inline-block;
+    width: 80px;
+    line-height: 2.2;
+    border: none;
+    background-color: #0917e4;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.validate-error-message-area {
+    width: 80%;
+    margin: 10px auto 0;
+}
+
+.validate-error-message {
+    line-height: 1.5;
+    color: red;
+}
+
+.register-link {
+    vertical-align: middle;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+
+/* 予約変更画面 */
+.update-booking-area{
+    width: 40%;
+    margin: 0 auto 0;
+    background-color: #0917e4;
+}
+
+.update-booking-form {
+    padding: 25px;
+    background-color: #0917e4;
+}
+
+.update-status-title {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.update-booking-content {
+    width: 100%;
+    margin-top: 30px;
+    color: white;
+}
+
+.update-btn-area {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.update-btn {
+    border: none;
+    border-radius: 6px;
+    display: inline-block;
+    width: 150px;
+    line-height: 2;
+}
+
+
+
