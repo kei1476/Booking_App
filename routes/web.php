@@ -7,11 +7,11 @@ use App\Http\Controllers\ShopManagerController;
 use App\Http\Controllers\SiteManagerController;
 use App\Http\Controllers\PaymentsController;
 
+// ユーザー向けページ（認証なし）
 Route::get('/shops',[ShopController::class,'index']);
 Route::get('/detail/{id}',[ShopController::class,'detail']);
-Route::get('/evaluation/{id}',[ShopController::class,'showEvaluation']);
 
-// ユーザー向けページ
+// ユーザー向けページ（要認証）
 Route::group(['middleware' => 'auth'], function () {
     Route::post('/book',[ShopController::class,'sendBook']);
     Route::get('/likes/{id}/',[ShopController::class,'sendLike']);

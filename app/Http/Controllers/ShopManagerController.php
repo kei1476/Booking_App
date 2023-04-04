@@ -22,6 +22,7 @@ use App\Models\Course;
 
 class ShopManagerController extends Controller
 {
+    // 予約一覧
     public function showBooks()
     {
         $manager_id = Auth::guard('admin')->id();
@@ -40,6 +41,7 @@ class ShopManagerController extends Controller
         return view('managers.shop_books',compact('books','shop_id'));
     }
 
+    // 店舗情報更新ページ表示
     public function showEditPage($id)
     {
         $areas = Area::all();
@@ -53,6 +55,7 @@ class ShopManagerController extends Controller
         return view('managers.update_shop_info',compact('shop','areas','genres'));
     }
 
+    // 店舗情報更新処理
     public function updateShopInfo(ShopInfoRequest $request)
     {
         $shop_info = $request->all();
@@ -76,12 +79,14 @@ class ShopManagerController extends Controller
         return back();
     }
 
+    // メール作成ページ表示
     public function sendMailPage($id)
     {
         $user = User::find($id);
         return view('managers.sendmail',compact('user'));
     }
 
+    // メール送信処理
     public function sendMail(Request $request)
     {
         $inputs = $request->all();
@@ -89,6 +94,7 @@ class ShopManagerController extends Controller
         return back();
     }
 
+    // コース一覧ページ表示
     public function coursePage($id)
     {
         $courses = Course::where('shop_id',$id)->orderBy('price','desc')->get();
@@ -96,13 +102,14 @@ class ShopManagerController extends Controller
         return view('managers.course_page',compact('courses','shop_id'));
     }
 
-
+    // コース削除
     public function deleteCourse($id)
     {
         Course::destroy($id);
         return back();
     }
 
+    // コース更新
     public function updateCourse(Request $request)
     {
         $course_id = $request->course_id;
@@ -122,6 +129,7 @@ class ShopManagerController extends Controller
         return back();
     }
 
+    // コース作成
     public function createCourse(CourseRequest $request)
     {
         Course::create($request->all());

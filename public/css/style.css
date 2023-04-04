@@ -58,7 +58,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 85%;
+    width: 90%;
     max-width: 1100px;
     padding: 20px 35px 20px;
     height: 100px;
@@ -223,6 +223,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 16px;
     row-gap: 20px;
+    overflow-x: scroll;
 }
 
 .search-error-message {
@@ -563,7 +564,7 @@ td {
     margin-bottom: 4px;
 }
 
-/* 口コミ一覧のページネーション */
+/*店舗詳細ページ 口コミ一覧のページネーション */
 .pagination-nav {
     display: inline-block;
 }
@@ -843,7 +844,7 @@ td {
 }
 
 .show-liked-shops {
-    width: 95%;
+    width: 90%;
     max-width: 1100px;
     margin: 40px auto 0;
     display: grid;

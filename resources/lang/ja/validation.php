@@ -171,6 +171,7 @@ return [
         'area_id' => 'エリア',
         'update_course_name' => 'コース名',
         'course_name' => 'コース名',
+        'course_id' => 'コース名',
         'update_price' => '価格',
         'price' => '価格',
     ],

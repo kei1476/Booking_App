@@ -21,9 +21,9 @@ use App\Models\Course;
 
 class ShopController extends Controller
 {
+    // 店舗一覧ページ
     public function index(Request $request)
     {
-
         $areas = Area::all();
         $genres = Genre::all();
         $area =  $request->input('area');
@@ -61,6 +61,7 @@ class ShopController extends Controller
         return view('shops',compact('shops','areas','genres'));
     }
 
+    // 店舗詳細ページ
     public function detail($id)
     {
         // 店舗詳細取得
@@ -91,6 +92,7 @@ class ShopController extends Controller
         return view('shop_detail',compact('shop','evaluations','avgs','times','courses'));
     }
 
+    // いいねを登録，取り消し
     public function sendLike(Request $request)
     {
         $id = $request->shop_id;
@@ -112,12 +114,14 @@ class ShopController extends Controller
          return redirect()->back();
     }
 
+    // 予約を登録
     public function sendBook(BookRequest $request)
     {
             Book::create($request->all());
             return view('complete');
     }
 
+    // 口コミ投稿
     public function sendEvaluation(EvaluationRequest $request)
     {
         $user_id = Auth::id();

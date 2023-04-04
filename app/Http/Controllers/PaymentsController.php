@@ -11,12 +11,14 @@ use App\Models\Book;
 
 class PaymentsController extends Controller
 {
+    // 決済ページh表示
     public function paymentPage(Request $request){
         $shop = $request->all();
 
         return view('payment.payment_page',compact('shop'));
     }
 
+    // 決済処理
     public function pay(Request $request){
          try{
 

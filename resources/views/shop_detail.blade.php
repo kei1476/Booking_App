@@ -23,7 +23,7 @@
         @error('book_date')
             <p class="book-error-message"><i class="fa-solid fa-triangle-exclamation"></i>{{$message}}</p>
         @enderror
-        <input type="date" class="book-date" name="book_date" value="">
+        <input type="date" class="book-date" name="book_date" value="{{old('book_date')}}">
 
         @error('book_time')
             <p class="book-error-message"><i class="fa-solid fa-triangle-exclamation"></i>{{$message}}</p>
@@ -31,7 +31,7 @@
         <select  class="book-time" name="book_time" id="book-time" >
             <option hidden value="">時間を選択してください</option>
             @foreach($times as $time)
-                <option value="{{$time}}">{{$time}}</option>
+                <option value="{{$time}}" @if($time == old('book_time')) selected @endif>{{$time}}</option>
             @endforeach
         </select>
 
@@ -41,14 +41,17 @@
         <select  class="people" name="people">
             <option hidden value="">人数を選択してください</option>
             @for($i = 1; $i < 11; $i++)
-               <option value="{{$i}}">{{$i}}人</option>
+               <option value="{{$i}}" @if($i == old('people')) selected @endif>{{$i}}人</option>
             @endfor
         </select>
         @if($courses->isNotEmpty())
+            @error('course_id')
+                <p class="book-error-message"><i class="fa-solid fa-triangle-exclamation"></i>{{$message}}</p>
+            @enderror
             <select class="course" name="course_id">
                 <option hidden value="">コースを選択してください</option>
                 @foreach($courses as $course)
-                <option value="{{$course->id}}">{{$course->course_name}}・{{$course->price}}円</option>
+                <option value="{{$course->id}}" @if($course->id == old('course_id')) selected @endif>{{$course->course_name}}・{{$course->price}}円</option>
                 @endforeach
             </select>
         @endif
@@ -60,15 +63,15 @@
             </tr>
             <tr>
                 <th>Date</th>
-                <td class="show-bookdate"></td>
+                <td class="show-bookdate">{{old('book_date')}}</td>
             </tr>
             <tr>
                 <th>Time</th>
-                <td class="show-booktime"></td>
+                <td class="show-booktime">{{old('book_time')}}</td>
             </tr>
             <tr>
                 <th>Number</th>
-                <td class="show-people"></td>
+                <td class="show-people">{{old('people')}}</td>
             </tr>
             @if($courses->isNotEmpty())
             <tr>

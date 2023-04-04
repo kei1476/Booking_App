@@ -1,4 +1,5 @@
 $(function () {
+    // ハンバーガーメニュー
     $(".openbtn6").click(function () {
         $(this).toggleClass('active');
         $(".main-menu").toggleClass('open');
@@ -7,8 +8,9 @@ $(function () {
         $("footer").toggleClass("hidden");
     });
 
+    // ヘッダー固定
     var navPos = $(".header").offset().top;
-
+    
     $(window).scroll(function () {
         $(window).scrollTop();
         if ($(window).scrollTop() > navPos) {
@@ -47,6 +49,7 @@ $(function () {
         }
     });
 
+    // ホームに戻るボタンの矢印を動かす
     $(".detail-back-btn").hover(function () {
         $(".fa-chevron-left").css("transform","translateX(-3px)")
     }, function () {

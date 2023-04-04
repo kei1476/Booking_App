@@ -2,11 +2,11 @@
 @section('content')
 <x-header-menu :shopId="$shop_id->shop_id" />
 <h1 class="shop-books-title">店舗管理画面</h1>
-<h3 class="booking-status-title">店舗予約状況</h3>
+<h3 class="booking-status-title">店舗予約一覧</h3>
 {{ $books->links() }}
 <div class="show-booking-area">
     @if($books->isEmpty())
-    <p class="no-book-message">予約はありません</p>
+        <p class="no-book-message">予約はありません</p>
     @endif
     @foreach($books as $book)
     <table class="booking-status">

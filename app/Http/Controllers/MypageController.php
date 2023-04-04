@@ -17,6 +17,7 @@ use App\Models\Course;
 
 class MypageController extends Controller
 {
+    // マイページ表示
     public function showMypage()
     {
         $user_id = Auth::id();
@@ -50,12 +51,14 @@ class MypageController extends Controller
         return view('mypage',compact('likes','books','courses'));
     }
 
+    // 予約取り消し
     public function deleteBook($id)
     {
         Book::where('id',$id)->delete();
         return redirect()->back();
     }
 
+    // 予約変更ページ表示
     public function updateBookPage($id)
     {
         $query = Shop::query();
@@ -71,6 +74,7 @@ class MypageController extends Controller
         return view('update_book',compact('book','times'));
     }
 
+    // 予約変更
     public function sendUpdateBook(BookRequest $request)
     {
         $book_id = $request->id;

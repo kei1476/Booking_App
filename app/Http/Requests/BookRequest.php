@@ -26,7 +26,8 @@ class BookRequest extends FormRequest
         return [
             'book_date' => 'required|date|after:today',
             'book_time' => 'required',
-            'people' => 'required'
+            'people' => 'required',
+            'course_id' => 'required'
         ];
     }
 }

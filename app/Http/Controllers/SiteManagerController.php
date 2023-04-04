@@ -16,11 +16,13 @@ use App\Models\Course;
 
 class SiteManagerController extends Controller
 {
+    // サイト管理者トップページ表示
     public function siteManagerPage()
     {
         return view('managers.site_manager');
     }
 
+    // 店舗運営者作成
     public function createShopManager(Request $request)
     {
         $request->validate([
@@ -40,6 +42,7 @@ class SiteManagerController extends Controller
         return back();
     }
 
+    // 店舗作成ページ表示
     public function createShopPage()
     {
         $areas = Area::all();
@@ -48,6 +51,7 @@ class SiteManagerController extends Controller
         return view('managers.create_shop',compact('areas','genres'));
     }
 
+    // 店舗作成処理
     public function createShop(ShopCreateRequest $request)
     {
         $file_name = $request->file('image')->getClientOriginalName();
