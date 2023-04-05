@@ -68,7 +68,7 @@
             </dd>
 
         </dl>
-        <div class="register-btn-area">
+        <div class="register-btn-area create-shop-btn">
             <button class="registration-btn">登録</button>
         </div>
     </form>

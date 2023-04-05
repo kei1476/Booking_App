@@ -492,7 +492,7 @@
     /* 店舗代表者ページ 　コース作成・更新ページ*/
     .update-courses {
         width: 95%;
-        margin: 30px auto;
+        margin: 15px auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -504,6 +504,7 @@
 
     .courses-main-title {
         font-size: 24px;
+        margin-top: 20px;
     }
 
     .courses-title {
@@ -579,6 +580,65 @@
         margin: 20px 0 0;
     }
 
+    /* 店舗代表者ページ/店舗情報更新ページ */
+    .update-info-title {
+        font-size: 22px;
+        margin-top: 25px;
+    }
+
+    .update-shop-info {
+        width: 85%;
+        max-width: 500px;
+        margin-top: 40px;
+    }
+
+    .update-shop-info dt {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    .update-shop-info dd input[name = "name"],
+    .update-shop-info dd select,
+    .update-shop-info dd textarea {
+        padding: 3px;
+        font-size: 14px;
+    }
+
+    .update-btn-area {
+        margin-top: 30px;
+    }
+
+    /* 店舗代表者ページ/メール送信画面 */
+    .sendmail-title {
+        font-size: 22px;
+        margin-top: 30px;
+    }
+
+    .send-mail-area {
+        margin-top: 30px;
+    }
+
+    .send-mail-area dt {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .send-mail-area dd {
+        font-size: 16px;
+    }
+
+    .send-mail-area dd input[name="subject"] {
+        padding: 2px;
+    }
+
+    /* サイト管理者ページここから */
+    /* サイト管理者ログイン画面 */
+    .admin-login-title,
+    .site-manager-login-title {
+        font-size: 22px;
+        margin-top: 170px;
+    }
+
     /* サイト管理者ページ・店舗作成画面 */
     .site-manager-title {
         font-size: 24px;
@@ -601,7 +661,11 @@
         padding: 2px;
         font-size: 12px;
         width: 75%;
-        min-width: 260px;
+        min-width: 220px;
+    }
+
+    .create-shop-btn {
+        text-align: center;
     }
 }
 
