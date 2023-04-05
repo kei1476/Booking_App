@@ -68,12 +68,6 @@ class ShopManagerController extends Controller
                 'about' => $shop_info['about'],
             ]);
 
-        Course::create([
-            'shop_id' => $shop_info['shop_id'],
-            'course_name' => $shop_info['course_name'],
-            'price' => $shop_info['price']
-        ]);
-
         $request->session()->flash('status', '店舗情報更新しました');
 
         return back();

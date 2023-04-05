@@ -5,8 +5,8 @@
 @if(session('status'))
     <p class="success-update-book">{{session('status')}}</p>
 @endif
+<h3 class="booking-status-title">予約状況</h3>
 <div class="mypage-pagination-area">
-    <h3 class="booking-status-title">予約状況</h3>
     {{$books->links('vendor\pagination\mypage-pagination')}}
 </div>
 <div class="show-booking-area">
@@ -51,10 +51,10 @@
                     <th class="update-book-btn">
                         <a href="/update/book/{{$book->id}}">予約内容変更</a>
                         @foreach($courses as $course)
-                            @if(($book->id == $course->id) && $course->payment == 0 && $course->price !== 0)
+                            @if($book->id == $course->id && $course->payment == 0 && $course->price !== 0)
                                 <a href="/pay?name={{$book->name}}&course_name={{$course->course_name}}&price={{$course->price}}&book_id={{$book->id}}"
                                     class="pay-link">支払う</a>
-                            @elseif(($book->id == $course->id) && $course->payment == 1)
+                            @elseif($book->id == $course->id && $course->payment == 1)
                                 <span class="complete-pay">支払い済み</span>
                             @endif
                         @endforeach

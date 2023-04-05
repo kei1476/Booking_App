@@ -1,6 +1,5 @@
 @charset "utf-8";
 @media(max-width:768px){
-
 /* 店舗一覧ページ/ヘッダー */
     .header-area {
         display: block;
@@ -62,6 +61,10 @@
             left: 13px;
             transform: translateY(-6px) rotate(135deg);
         }
+
+    .main-nav {
+        top: 50%;
+    }
 
     .main-nav-list {
         font-size: 20px;
@@ -160,8 +163,13 @@
         margin-top: 25px;
     }
 
+    .mypage-pagination-area {
+        height: 30px;
+        margin-top: 15px;
+    }
+
     .user-name {
-        margin-top: 35px;
+        margin-top: 25px;
         font-size: 24px;
     }
 
@@ -174,7 +182,7 @@
     }
 
     .booking-status-title {
-        margin-top: 50px;
+        margin-top: 35px;
     }
 
     .update-book-btn-area {
@@ -250,7 +258,8 @@
 
     .book-date,
     .book-time,
-    .people {
+    .people,
+    .course {
         padding: 2px;
         margin: 0 auto 15px;
         width: 85%;

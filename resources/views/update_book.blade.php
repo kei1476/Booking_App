@@ -32,18 +32,18 @@
         @error('book_date')
             <p class="book-error-message"><i class="fa-solid fa-triangle-exclamation"></i>{{$message}}</p>
         @enderror
-        <input type="date" class="book-date" name="book_date" value="">
+        <input type="date" class="book-date" name="book_date" value="{{old('book_date')}}">
 
         @error('book_time')
             <p class="book-error-message"><i class="fa-solid fa-triangle-exclamation"></i>{{$message}}</p>
         @enderror
-
         <select class="book-time" name="book_time" id="book-time">
             <option hidden value="">時間を選択してください</option>
             @foreach($times as $time)
-                <option value="{{$time}}" @if("{{$time}}"==old('book_time')) selected @endif>{{$time}}</option>
+                <option value="{{$time}}" @if($time ==old('book_time')) selected @endif>{{$time}}</option>
             @endforeach
         </select>
+
         @error('people')
             <p class="book-error-message"><i class="fa-solid fa-triangle-exclamation"></i>{{$message}}</p>
         @enderror
