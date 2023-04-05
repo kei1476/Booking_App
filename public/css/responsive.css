@@ -104,7 +104,7 @@
         padding: 0;
         height: 100%;
         display: block;
-        width: 40px;
+        width: 80px;
         margin: 20px auto 0;
     }
 
@@ -121,8 +121,30 @@
     }
 
     .responsive-search-area form {
-        width: 300px;
-        margin: 20px auto 0;
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        display: none;
+    }
+
+    .toggle-search-area {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .toggle-search {
+        border: none;
+        width: 220px;
+        background-color: rgb(30, 34, 243);
+        color: white;
+        padding: 4px;
+        text-align: left;
+    }
+
+    .toggle-search .fa-chevron-down {
+        margin-right: 6px;
     }
 
 /* 店舗一覧ページ/一覧エリア */
@@ -156,6 +178,23 @@
 
     .fa-heart {
         font-weight: 700;
+    }
+
+    .page-top-btn {
+        display: block;
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        background-color: #999;
+        opacity: 0;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        border-radius: 50%;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s;
     }
 
     /* マイページ */
@@ -285,10 +324,16 @@
     .evaluations-area  {
         width: 90%;
         margin-top: 70px;
+        margin-bottom: 0;
     }
 
     .evaluations-title {
         font-size: 24px;
+    }
+
+    .no-evaluations-text {
+        font-size: 16px;
+        text-align: center;
     }
 
     .avg-score {

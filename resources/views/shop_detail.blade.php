@@ -152,6 +152,7 @@
         </div>
     @endif
 </div>
+<button class="page-top-btn"><i class="fa-solid fa-arrow-up"></i></button>
 @component('components.footer')
 @endcomponent
 @endsection

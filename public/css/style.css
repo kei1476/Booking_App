@@ -293,6 +293,14 @@ body {
     color: black;
 }
 
+.page-top-btn {
+    display: none;
+}
+
+.toggle-search-area {
+    display: none;
+}
+
 /* 店舗詳細ページ・店舗概要エリア */
 .shop-detail-wrapper {
     display: flex;

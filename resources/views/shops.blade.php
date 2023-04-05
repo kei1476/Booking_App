@@ -45,6 +45,9 @@
         </form>
     </div>
 </header>
+<div class="toggle-search-area">
+    <button class="toggle-search"><i class="fa-solid fa-chevron-down"></i>条件で絞り込む</button>
+</div>
 <div class="responsive-search-area">
     <ul>
         <form action="/shops" method="GET">
@@ -101,6 +104,7 @@
     </div>
     @endforeach
 </main>
+<button class="page-top-btn"><i class="fa-solid fa-arrow-up"></i></button>
 @component('components.footer')
 @endcomponent
 @endsection

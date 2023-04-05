@@ -10,7 +10,7 @@ $(function () {
 
     // ヘッダー固定
     var navPos = $(".header").offset().top;
-    
+
     $(window).scroll(function () {
         $(window).scrollTop();
         if ($(window).scrollTop() > navPos) {
@@ -20,6 +20,26 @@ $(function () {
             $(".header").css("position", "static");
             $(".header-area").removeClass("small");
         }
+    })
+
+    // 店舗一覧ページ トップに戻るボタン
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 150) {
+            $('.page-top-btn').css("opacity", ".8");
+        } else {
+            $('.page-top-btn').css("opacity", "0");
+        }
+    });
+
+    $('.page-top-btn').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+    })
+
+    $(".toggle-search").click(function () {
+        $(".responsive-search-area form").slideToggle();
     })
 
     // 予約ページの入力内容を反映し表示
