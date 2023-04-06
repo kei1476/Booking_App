@@ -11,8 +11,7 @@
         "laravel/cashier": "*",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5",
-        "simplesoftwareio/simple-qrcode": "^0.0.4@beta"
+        "laravel/tinker": "^2.5"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
