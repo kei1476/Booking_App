@@ -77,6 +77,7 @@ class MypageController extends Controller
     // 予約変更
     public function sendUpdateBook(BookRequest $request)
     {
+        dd($request->book_date);
         $book_id = $request->id;
         Book::where('id',$book_id)->update([
             'book_date' => $request->book_date,
