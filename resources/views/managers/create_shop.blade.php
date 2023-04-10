@@ -40,7 +40,7 @@
                     <option hidden value="">ジャンルを選択してください</option>
                     @foreach($genres as $genre)
                     <option value="{{$genre->id}}"
-                        @if("{{$genre->id}}" == old('genre_id')) selected @endif>"
+                        @if("{{$genre->id}}" == old('genre_id')) selected @endif>
                         {{$genre->genre}}
                     </option>
                     @endforeach
