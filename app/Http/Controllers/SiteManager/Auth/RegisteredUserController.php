@@ -37,7 +37,7 @@ class RegisteredUserController extends Controller
         $request->validate([
             'site_manager_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:site_managers'],
-            'password' => ['required',rules\password::defaults()],
+            'password' => ['required','max:255'],
         ]);
 
 
