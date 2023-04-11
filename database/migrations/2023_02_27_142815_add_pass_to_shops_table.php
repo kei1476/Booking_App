@@ -14,7 +14,7 @@ class AddPassToShopsTable extends Migration
     public function up()
     {
         Schema::table('shops', function (Blueprint $table) {
-            $table->string('path');
+            $table->longText('path');
         });
     }
 
