@@ -65,7 +65,7 @@
     @foreach($likes as $like)
         <div class="liked-shop">
             <div class="shop-image-area">
-                <img src="data:image/png;base64,<?php echo $shop->path;?>" class="shop-image">
+                <img src="data:image/png;base64,<?php echo $like->path;?>" class="shop-image">
             </div>
             <div class="shop-contents">
                 <div class="shop-texts">
