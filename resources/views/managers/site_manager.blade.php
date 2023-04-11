@@ -18,7 +18,7 @@
 </div>
 <h2 class="site-manager-title">サイト管理者画面</h2>
 @if(session('status'))
-<p class="success-update-book">{{session('status')}}</p>
+    <p class="success-update-book">{{session('status')}}</p>
 @endif
 <div class="register-area">
     <form action="/site/manager" method="POST" class="register-form">

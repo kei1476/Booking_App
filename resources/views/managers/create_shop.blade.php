@@ -17,6 +17,9 @@
     </div>
 </div>
 <h2>店舗作成画面</h2>
+@if(session('status'))
+    <p class="success-update-book">{{session('status')}}</p>
+@endif
 <div class="shop-create-area">
     <form action="/site/create/shop" method="POST" enctype="multipart/form-data" class="register-form">
         @csrf

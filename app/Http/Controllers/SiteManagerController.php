@@ -70,6 +70,8 @@ class SiteManagerController extends Controller
             'path' => $binary_image
         ]);
 
+        $request->session()->flash('status', '店舗を作成しました');
+
         return back();
     }
 }
