@@ -10,6 +10,8 @@
         <div class="shop-detail-content">
             <div class="detail-image-area">
                 <img src="data:image/png;base64,<?php echo $shop->path;?>" class="detail-image">
+                {{-- ストレージに保存する場合 ↓（本番環境では画像表示できなかったのでコメントアウトしています。） --}}
+                {{-- <img src="data:image/png;base64,<?php echo $shop->path;?>" class="shop-image"> --}}
             </div>
             <div class="detail-content-area">
                 <p class="detail-tags">#{{$shop->area}} #{{$shop->genre}}</p>

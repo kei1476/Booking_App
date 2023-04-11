@@ -55,6 +55,7 @@ class SiteManagerController extends Controller
     // 店舗作成処理
     public function createShop(ShopCreateRequest $request)
     {
+        // ストレージに保存（本番環境では画像表示できなかったのでコメントアウトしています。）
         // $file_name = $request->file('image')->getClientOriginalName();
         // $request->file('image')->storeAs('public/img', $file_name);
 
