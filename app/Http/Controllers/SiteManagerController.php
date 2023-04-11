@@ -54,15 +54,18 @@ class SiteManagerController extends Controller
     // 店舗作成処理
     public function createShop(ShopCreateRequest $request)
     {
-        $file_name = $request->file('image')->getClientOriginalName();
-        $request->file('image')->storeAs('public/img', $file_name);
+        // $file_name = $request->file('image')->getClientOriginalName();
+        // $request->file('image')->storeAs('public/img', $file_name);
+
+        $image = file_get_contents($_FILES['image']['tmp_name']);
+        $binary_image = base64_encode($image);
 
         Shop::create([
             'name' => $request->shop_name,
             'genre_id' => $request->genre_id,
             'area_id' => $request->area_id,
             'about' => $request->about,
-            'path' => $file_name
+            'path' => $binary_image 
         ]);
 
         return back();
