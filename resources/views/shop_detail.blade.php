@@ -9,7 +9,7 @@
         </div>
         <div class="shop-detail-content">
             <div class="detail-image-area">
-                <img src="{{ asset('storage/img/'.$shop->path) }}" class="detail-image">
+                <img src="data:image/png;base64,<?php echo $shop->path;?>" class="detail-image">
             </div>
             <div class="detail-content-area">
                 <p class="detail-tags">#{{$shop->area}} #{{$shop->genre}}</p>
