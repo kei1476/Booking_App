@@ -115,8 +115,13 @@ class ShopController extends Controller
     }
 
     // 予約を登録
-    public function sendBook(BookRequest $request)
+    public function sendBook(Request $request)
     {
+            $request->validate([
+                'book_date' => ['required', 'date', 'after:yesterday'],
+                'book_time' => ['required'],
+                'people' => ['required'],
+            ]);
             Book::create($request->all());
             return view('complete');
     }

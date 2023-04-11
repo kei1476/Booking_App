@@ -80,9 +80,9 @@
     @foreach($shops as $shop)
     <div class="shop">
         <div class="shop-image-area">
-            <img src="{{ asset('storage/img/'.$shop->path) }}" class="shop-image">
+            <img src="data:image/png;base64,<?php echo $shop->path;?>" class="shop-image">
             {{-- ストレージに保存する場合 ↓（本番環境では画像表示できなかったのでコメントアウトしています。） --}}
-            {{-- <img src="data:image/png;base64,<?php echo $shop->path;?>" class="shop-image"> --}}
+            {{-- <img src="{{ asset('storage/img/'.$shop->path) }}" class="shop-image"> --}}
         </div>
         <div class="shop-contents">
             <div class="shop-texts">
