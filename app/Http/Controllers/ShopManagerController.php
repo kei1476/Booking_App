@@ -85,6 +85,7 @@ class ShopManagerController extends Controller
     {
         $inputs = $request->all();
         Mail::to($inputs['email'])->send(new ContactMail($inputs));
+        $request->session()->flash('status', 'メールを送信しました');
         return back();
     }
 

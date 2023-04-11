@@ -13,7 +13,6 @@
                             @csrf
                             <button class="logout-btn">ログアウト</button>
                         </form>
-                        {{-- <li class="main-nav-list"><a href="/shop/Info/edit/{{$shop_id->shop_id}}">店舗情報更新</a></li> --}}
                     </ul>
                 </nav>
             </div>
@@ -21,6 +20,9 @@
     </div>
 </header>
 <h2 class="sendmail-title">メール送信画面</h2>
+@if(session('status'))
+<p class="success-update-book">{{session('status')}}</p>
+@endif
 <div class="send-mail-area">
     <form action="/shop/sendmail" method="POST">
         @csrf

@@ -38,6 +38,8 @@ class SiteManagerController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
+        $request->session()->flash('status', '店舗代表者を作成しました');
+
         return back();
     }
 
