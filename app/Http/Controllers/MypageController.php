@@ -75,8 +75,14 @@ class MypageController extends Controller
     }
 
     // 予約変更
-    public function sendUpdateBook(BookRequest $request)
+    public function sendUpdateBook(Request $request)
     {
+        $request->validate([
+            'book_date' => ['required', 'date', 'after:yesterday'],
+            'book_time' => ['required'],
+            'people' => ['required'],
+        ]);
+
         $book_id = $request->id;
         Book::where('id',$book_id)->update([
             'book_date' => $request->book_date,
