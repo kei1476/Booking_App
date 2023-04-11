@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use App\Models\SiteManager;
 use App\Models\ShopManager;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\Rules;
 use App\Models\Shop;
 use App\Models\Genre;
 use App\Models\Area;
@@ -29,7 +28,7 @@ class SiteManagerController extends Controller
             'shop_manager_name' => ['required', 'string', 'max:255'],
             'shop_id' => ['required'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required',rules\password::defaults()],
+            'password' => ['required','max:255','min:8','regex:/^(?=.*?[a-z])(?=.*?\d)[a-z\d]+$/i'],
         ]);
 
         ShopManager::create([
@@ -65,7 +64,7 @@ class SiteManagerController extends Controller
             'genre_id' => $request->genre_id,
             'area_id' => $request->area_id,
             'about' => $request->about,
-            'path' => $binary_image 
+            'path' => $binary_image
         ]);
 
         return back();
