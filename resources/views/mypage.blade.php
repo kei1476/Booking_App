@@ -6,9 +6,6 @@
     <p class="success-update-book">{{session('status')}}</p>
 @endif
 <h3 class="booking-status-title">予約状況</h3>
-<div class="mypage-pagination-area">
-    {{$books->links('vendor\pagination\mypage-pagination')}}
-</div>
 <div class="show-booking-area">
     @foreach($books as $book)
         <table class="booking-status">
