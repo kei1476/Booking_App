@@ -117,7 +117,6 @@ class ShopController extends Controller
     // 予約を登録
     public function sendBook(BookRequest $request)
     {
-        dd($request->all());
             Book::create($request->all());
             return view('complete');
     }
