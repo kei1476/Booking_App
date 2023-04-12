@@ -153,6 +153,7 @@
         flex-direction: column;
         width: 250px;
         margin: 30px auto 30px;
+        overflow-x: hidden;
     }
 
     .shop {

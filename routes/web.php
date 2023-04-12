@@ -12,7 +12,7 @@ Route::get('/shops',[ShopController::class,'index']);
 Route::get('/detail/{id}',[ShopController::class,'detail']);
 
 // ユーザー向けページ（要認証）
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => 'auth','verified'], function () {
     Route::post('/book',[ShopController::class,'sendBook']);
     Route::get('/likes/{id}/',[ShopController::class,'sendLike']);
     Route::post('/evaluation',[ShopController::class,'sendEvaluation']);
