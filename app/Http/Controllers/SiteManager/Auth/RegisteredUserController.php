@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
-use App\Http\Requests\RegisterRequest;
+use Illuminate\Support\Facades\Validator;
 
 class RegisteredUserController extends Controller
 {
@@ -33,8 +33,14 @@ class RegisteredUserController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(RegisterRequest $request)
+    public function store(Request $request)
     {
+        $request->validate([
+            'site_manager_name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|max:255|min:8|regex:/^(?=.*?[a-z])(?=.*?\d)[a-z\d]+$/i',
+        ]);
+
         $user = SiteManager::create([
             'site_manager_name' => $request->site_manager_name,
             'email' => $request->email,
