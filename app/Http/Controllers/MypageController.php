@@ -39,7 +39,7 @@ class MypageController extends Controller
         $query->join('books','shops.id','=','books.shop_id');
         $query->where('user_id',$user_id);
         $query->orderBy('book_date','desc');
-        $books = $query->paginate(3);
+        $books = $query->get();
 
         // 予約したコース情報を取得
         $courses = Book::select('books.id','books.course_id','books.payment','books.payment','courses.course_name','courses.price')
