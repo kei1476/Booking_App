@@ -1,64 +1,60 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# アプリケーション名
+・RESE 飲食店予約システム
+![2023-04-15 (1)](https://user-images.githubusercontent.com/118151019/232185424-7c16ae99-801a-466d-be01-b298f789a769.png)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# 作成目的
+・自社予約サービスの運用とその管理のため。
 
-## About Laravel
+# URL
+[メインページ] (https://rese-booking-app.herokuapp.com/shops)
+※予約はコースを選ばなければバリデーション通らないのでコースが作成されている店舗（店舗一覧の一番最初に来ている仙人という店舗）で試してみてください。
+※サイト管理者で店舗代表者を作成し、店舗運営者ページでコースを作成する形になっています。
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[店舗代表者画面] (https://rese-booking-app.herokuapp.com/admin/login)
+ログインメールアドレス：sennminn@outlook.jp
+パスワード：senninn1476
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+[サイト管理者画面] (https://rese-booking-app.herokuapp.com/site_manager/register)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# 機能一覧
+### ユーザー関連
+・ログイン機能
+・メール認証機能
+・お気に入り機能
+・予約機能
+・評価機能
+・ジャンル、エリア、店名での検索
+・決済機能
+・リマインダー
 
-## Learning Laravel
+### 管理画面（店舗代表者）
+・ログイン機能
+・予約一覧
+・店舗情報更新
+・コース作成
+・予約者にメール送信
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 管理画面
+・ログイン機能
+・店舗代表者作成
+・店舗作成
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# 環境
+・Laravel 8,Jquery
 
-## Laravel Sponsors
+# テーブル設計書
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+![2023-04-15 (3)](https://user-images.githubusercontent.com/118151019/232185352-470b94a0-10ad-402d-98b5-bf86e10c23e9.png)
 
-### Premium Partners
+![2023-04-15 (4)](https://user-images.githubusercontent.com/118151019/232185355-ae380d06-d73e-402c-ae7a-339a1fb9dbfb.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+![2023-04-15 (5)](https://user-images.githubusercontent.com/118151019/232185358-fafd2975-a854-4b6f-ae18-73ee8df355d7.png)
 
-## Contributing
+# ER図
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![2023-04-15 (2)](https://user-images.githubusercontent.com/118151019/232185349-1efa823a-316b-4153-a0a6-75dba089c2ba.png)
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# その他
+・決済機能は本番環境での利用申請はしておりません。
+・メール認証はユーザー登録時のみ適用しました。
+・ストレージに保存する場合のコードは本番環境で画像表示できなかったのでコメントアウトしています。
