@@ -670,3 +670,8 @@
     }
 }
 
+@media(max-width:920px) {
+    .main {
+        overflow-x: scroll;
+    }
+}
