@@ -7,12 +7,12 @@
 ・自社予約サービスの運用とその管理のため。
 
 # URL
-[メインページ] (https://rese-booking-app.herokuapp.com/shops)
-※予約はコースを選ばなければバリデーション通らないのでコースが作成されている店舗（店舗一覧の一番最初に来ている仙人という店舗）で試してみてください。
+[メインページ] (https://rese-booking-app.herokuapp.com/shops)<br>
+※予約はコースを選ばなければバリデーション通らないのでコースが作成されている店舗（店舗一覧の一番最初に来ている仙人という店舗）で試してみてください。<br>
 ※サイト管理者で店舗代表者を作成し、店舗運営者ページでコースを作成する形になっています。
 
-[店舗代表者画面] (https://rese-booking-app.herokuapp.com/admin/login)
-ログインメールアドレス：sennminn@outlook.jp
+[店舗代表者画面] (https://rese-booking-app.herokuapp.com/admin/login)<br>
+ログインメールアドレス：sennminn@outlook.jp<br>
 パスワード：senninn1476
 
 [サイト管理者画面] (https://rese-booking-app.herokuapp.com/site_manager/register)
@@ -56,6 +56,6 @@
 ![2023-04-15 (2)](https://user-images.githubusercontent.com/118151019/232185349-1efa823a-316b-4153-a0a6-75dba089c2ba.png)
 
 # その他
-・決済機能は本番環境での利用申請はしておりません。
-・メール認証はユーザー登録時のみ適用しました。
+・決済機能は本番環境での利用申請はしておりません。<br>
+・メール認証はユーザー登録時のみ適用しました。<br>
 ・ストレージに保存する場合のコードは本番環境で画像表示できなかったのでコメントアウトしています。
