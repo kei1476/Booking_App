@@ -1,6 +1,7 @@
 # アプリケーション名
 ・RESE 飲食店予約システム
 ![2023-04-15 (1)](https://user-images.githubusercontent.com/118151019/232185424-7c16ae99-801a-466d-be01-b298f789a769.png)
+![2023-04-15 (6)](https://user-images.githubusercontent.com/118151019/232187128-e4ae9124-e3cd-46af-be56-ba246728055b.png)
 
 # 作成目的
 ・自社予約サービスの運用とその管理のため。
